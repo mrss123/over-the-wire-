@@ -98,7 +98,9 @@ i submitted the password and it provided the password
  this one needs to undersanding of how ssl/tls handshake works 
  - the discription states i need to connect over port 30001
  - i read the manual
+
    `openssl s_client localhost:30001`
-   then submitted the password i used to login to level 15 and it was correct 
+   
+   hen submitted the password i used to login to level 15 and it was correct 
 
 		
