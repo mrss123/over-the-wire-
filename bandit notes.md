@@ -90,7 +90,8 @@ then i used same file to login directly to level 14 so i can login and use the p
 level 15 used from level 14 
 
 this one was easy 
-	the discription says to submit the password i used to login on port 30000
-		`telnet -a localhost 30000`
-		i submitted the password and it provided the password 
+the discription says to submit the password i used to login on port 30000
+	
+	`telnet -a localhost 30000`
+i submitted the password and it provided the password 
 		
