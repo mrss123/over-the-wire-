@@ -35,21 +35,21 @@ level 6 used from level 5 password
 
 	`find -user bandit7 -group bandit6 -size 33c 2>/dev/null`
 
-level 7 used form level 6 
+## level 7 used form level 6 
 	under this level it was actually a bunch of names and strings infront of them 
 	so i used grep to the hint name given on the web 
 
-level 8 used from level 7 
+## level 8 used from level 7 
 	finding a char that occurs only once 
 
 	`sort filename | uniq -u`
 
-level 9 used from level 8
+## level 9 used from level 8
 	finding a chr that is followed by = 
 
 	`string filename | grep "="`
 
-level 10 used from level 9
+## level 10 used from level 9
 
 the password was located in a encrypted base64 data
 
@@ -59,7 +59,7 @@ copied the string
 
 	`echo "the string" | base64 -d `
 
-level 11  used form level 10
+## level 11  used form level 10
 
 	i actually didn't understand the command to execute this 
 	`tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt`
@@ -70,12 +70,12 @@ level 11  used form level 10
 	- `< data.txt` = read input from the file
     This will **print the decoded password** directly to your terminal.
 
-level 12 used from level 11
+## level 12 used from level 11
 
 this is by far the most complex decode routine i have saw from the challenge 
 	the password was locked and encrypted with hexdump on multiple layer so i have to dcrypt it with different method again and again 
 
-level 13 used from level 12 
+## level 13 used from level 12 
 
 this is trickey it have private key that lets you to connect over ssh to get for the next level 
 	i downloaded the file first to my local machine using same password i used to login bandit13 
@@ -87,11 +87,18 @@ then i used same file to login directly to level 14 so i can login and use the p
 		
 		`ssh -i sshkey.private bandit14@bandit.labs.org -p 2220`
 
-level 15 used from level 14 
+## level 14 used a password form the previous session 
 
 this one was easy 
 the discription says to submit the password i used to login on port 30000
 	
 	`telnet -a localhost 30000`
 i submitted the password and it provided the password 
+## level 15 same used password from the past one 
+ this one needs to undersanding of how ssl/tls handshake works 
+ - the discription states i need to connect over port 30001
+ - i read the manual
+   `openssl s_client localhost:30001`
+   then submitted the password i used to login to level 15 and it was correct 
+
 		
