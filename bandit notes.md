@@ -80,9 +80,11 @@ level 13 used from level 12
 this is trickey it have private key that lets you to connect over ssh to get for the next level 
 	i downloaded the file first to my local machine using same password i used to login bandit13 
 	edited the file
+	
 	`chmod 600 sshkey.private`
 	
 then i used same file to login directly to level 14 so i can login and use the password for the next level
+		
 		`ssh -i sshkey.private bandit14@bandit.labs.org -p 2220`
 
 level 15 used from level 14 
