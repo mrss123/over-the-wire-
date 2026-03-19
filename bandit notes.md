@@ -106,20 +106,20 @@ i submitted the password and it provided the password
 - as the previous level this one needs ssl/tls connection to get the next level password
 - but first you need to i dentify which port is litening for `31000-32000`
 - first i tried to see what ports are active on the local machine
-- 	`netstat -tuln`
+   	 `netstat -tuln`
 - i found some ports on the specified port range but none of them were open for ssl/tls
 - so i did nmap scan
--  `nmap -sV localhost -p 31000-32000`
+  	 `nmap -sV localhost -p 31000-32000`
 -  this gave me some port that didin't show up before
 -  so i use the openssl command to communicate and get what there is
--  `openssl s_client -connect localhost:31790 `
+  		`openssl s_client -connect localhost:31790 `
 -  this was the only one who responded with a private key
 -  but this private key didn't work
--  `openssl s_client -connect localhost:31790 -quiet `
+  		 `openssl s_client -connect localhost:31790 -quiet `
 -  	used the queit flag to reduce the jargon and it worked i submitted the password and gave me new private key for level 17
 -  	i used this key
   and on my local machine
-`nano mykey.pem`
+		`nano mykey.pem`
 `chmod 600 mykey.pem`	 		
 `ssh -i mykey.pem bandit17@bandit.labs.overthewire.org -p 2220`
 - and it worked i used so i directly started to search the folders
