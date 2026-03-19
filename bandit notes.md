@@ -1,10 +1,10 @@
-level 0 basic ls and seeing and reading files 
+## level 0 basic ls and seeing and reading files 
 
-level 1 used a password form readme on level 0 and get access 
+## level 1 used a password form readme on level 0 and get access 
 	it have - filed (dashed file) and opened by `./-`
 	it have password for bandit2
 
-level 2 used password from level 1
+## level 2 used password from level 1
 	it shows as space in the file name 
 	opened it with \/ 
 	have multiple file 
@@ -14,12 +14,12 @@ level 2 used password from level 1
 	
 	showed the password for the next level 
 
-level 3 used password from level 2
+## level 3 used password from level 2
 	found a password in inhere folder and continued 
 
-level 4 used form level 3 found passoword in inhere folder
+## level 4 used form level 3 found passoword in inhere folder
 
-level 5 used form level 4 simply seeing every directory 
+## level 5 used form level 4 simply seeing every directory 
 	
 	file ./* to 
 
@@ -30,8 +30,8 @@ to see the file type manually
 	
 and then  `cat .file2 `
 
-level 6 used from level 5 password 
-	same logic but differen finding method used from the clue given
+## level 6 used from level 5 password 
+same logic but differen finding method used from the clue given
 
 	`find -user bandit7 -group bandit6 -size 33c 2>/dev/null`
 
