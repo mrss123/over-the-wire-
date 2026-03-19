@@ -138,5 +138,16 @@ i submitted the password and it provided the password
 - and it worked i used so i directly started to search the folders
 - and found it under etc file
 
- `cat etc/bandot_pass/bandit17`
- 
+		 `cat etc/bandot_pass/bandit17`
+ ## level 17 used password form the previous level 
+ - this one interesting it requuires to use the command diff
+ - the clue was there are 2 files and the diffrence is the password for level 18
+so i read the manual 
+
+   		`diff --normal password.old password.new`
+   
+i got the password for level 18
+## level 18 used the previous level password 
+-  the problem was it immedietly closes the machine
+
+		`ssh bandit18@bandit.labs.org -p 2220 "cat readme"`
