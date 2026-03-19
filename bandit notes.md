@@ -81,7 +81,7 @@ this is trickey it have private key that lets you to connect over ssh to get for
 	i downloaded the file first to my local machine using same password i used to login bandit13 
 	edited the file
 	
-	`chmod 600 sshkey.private`
+		`chmod 600 sshkey.private`
 	
 then i used same file to login directly to level 14 so i can login and use the password for the next level
 		
@@ -92,14 +92,14 @@ then i used same file to login directly to level 14 so i can login and use the p
 this one was easy 
 the discription says to submit the password i used to login on port 30000
 	
-	`telnet -a localhost 30000`
+		`telnet -a localhost 30000`
 i submitted the password and it provided the password 
 ## level 15 same used password from the past one 
  this one needs to undersanding of how ssl/tls handshake works 
  - the discription states i need to connect over port 30001
  - i read the manual
  - 
-   `openssl s_client localhost:30001`
+   		`openssl s_client localhost:30001`
    
    hen submitted the password i used to login to level 15 and it was correct
 ## level 16 used password form level 15
@@ -108,32 +108,32 @@ i submitted the password and it provided the password
 - but first you need to i dentify which port is litening for `31000-32000`
 - first i tried to see what ports are active on the local machine
 
-  `netstat -tuln`
+  		`netstat -tuln`
   
 - i found some ports on the specified port range but none of them were open for ssl/tls
 - so i did nmap scan
 
-   `nmap -sV localhost -p 31000-32000`
+   		`nmap -sV localhost -p 31000-32000`
   
 -  this gave me some port that didin't show up before
 -  so i use the openssl command to communicate and get what there is
 
-   `openssl s_client -connect localhost:31790 `
+  		 `openssl s_client -connect localhost:31790 `
    
 -  this was the only one who responded with a private key
 -  but this private key didn't work
 
-    `openssl s_client -connect localhost:31790 -quiet `
+    	`openssl s_client -connect localhost:31790 -quiet `
    
 -  	used the queit flag to reduce the jargon and it worked i submitted the password and gave me new private key for level 17
 -  	i used this key
   and on my local machine
 
-	`nano mykey.pem`
+		`nano mykey.pem`
 
-`chmod 600 mykey.pem`
+		`chmod 600 mykey.pem`
  		
-`ssh -i mykey.pem bandit17@bandit.labs.overthewire.org -p 2220`
+		`ssh -i mykey.pem bandit17@bandit.labs.overthewire.org -p 2220`
 
 - and it worked i used so i directly started to search the folders
 - and found it under etc file
