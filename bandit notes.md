@@ -98,9 +98,30 @@ i submitted the password and it provided the password
  this one needs to undersanding of how ssl/tls handshake works 
  - the discription states i need to connect over port 30001
  - i read the manual
-
    `openssl s_client localhost:30001`
    
-   hen submitted the password i used to login to level 15 and it was correct 
-
-		
+   hen submitted the password i used to login to level 15 and it was correct
+## level 16 used password form level 15
+- this one was a bit trickey but have multiple very good concepts on network and it way of connections
+- as the previous level this one needs ssl/tls connection to get the next level password
+- but first you need to i dentify which port is litening for `31000-32000`
+- first i tried to see what ports are active on the local machine
+- 	`netstat -tuln`
+- i found some ports on the specified port range but none of them were open for ssl/tls
+- so i did nmap scan
+-  `nmap -sV localhost -p 31000-32000`
+-  this gave me some port that didin't show up before
+-  so i use the openssl command to communicate and get what there is
+-  `openssl s_client -connect localhost:31790 `
+-  this was the only one who responded with a private key
+-  but this private key didn't work
+-  `openssl s_client -connect localhost:31790 -quiet `
+-  	used the queit flag to reduce the jargon and it worked i submitted the password and gave me new private key for level 17
+-  	i used this key
+  and on my local machine
+`nano mykey.pem`
+`chmod 600 mykey.pem`	 		
+`ssh -i mykey.pem bandit17@bandit.labs.overthewire.org -p 2220`
+- and it worked i used so i directly started to search the folders
+- and found it under etc file
+- `cat etc/bandot_pass/bandit17`
