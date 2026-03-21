@@ -151,3 +151,9 @@ i got the password for level 18
 -  the problem was it immedietly closes the machine
 
 		`ssh bandit18@bandit.labs.org -p 2220 "cat readme"`
+## level 19 used form the previous level 
+- this level was more of technical
+- i found there is executable file that is only set for a user so i run it as is
+
+  		./bandit20-do cat /etc/bandit_pass/bandit20
+like level 17 -18
