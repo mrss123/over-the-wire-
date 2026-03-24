@@ -156,4 +156,4 @@ i got the password for level 18
 - i found there is executable file that is only set for a user so i run it as is
 
   		./bandit20-do cat /etc/bandit_pass/bandit20
-like level 17 -18
+- like level 17 -18
