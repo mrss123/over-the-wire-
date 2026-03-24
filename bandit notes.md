@@ -157,3 +157,8 @@ i got the password for level 18
 
   		./bandit20-do cat /etc/bandit_pass/bandit20
 - like level 17 -18
+## level 20 used from previous level 
+- on this level there was a setuid file that connects to a localhost on a specified port given
+
+	  echo "the password from previous level" | netcat -lp <port>
+      ./suconnect <port> 
