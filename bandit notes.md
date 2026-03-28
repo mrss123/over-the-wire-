@@ -173,4 +173,21 @@ i got the password for level 18
   		cd etc/cron.d
   		cat cronjob_bandit22
    		cat /usr/bin/cronjob_bandit22.sh
-  		cat /tmp/jargon 
+  		cat /tmp/jargon
+
+## level 22 
+this level requires to have an idea on how to read a bash shell 
+the process is almost same as perivious 
+execute the bash echos and you will get the password 
+
+## level 23 
+this level requeirs to run a shell from cronjob
+
+## level 24 
+brute force the connection 
+
+	for i in {0000..9999}; do echo "<previou levlel password> $i" ; done | netcat localhost 30002
+
+## level 25
+
+## level 26
